@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.9);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 1);
+}
+
+.task-card {
+  transition: transform 0.18s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.18s ease, border-color 0.18s ease;
+  user-select: none;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+.task-card.dragging {
+  opacity: 0.45;
+  transform: scale(0.98) rotate(1.5deg);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25);
+  cursor: grabbing !important;
+}
+
+.kanban-column.drag-over {
+  background-color: rgba(238, 242, 255, 0.85);
+  border-color: #6366f1 !important;
+}
+
+.drop-indicator {
+  height: 4px;
+  background: linear-gradient(90deg, #4f46e5, #818cf8);
+  border-radius: 9999px;
+  margin: 6px 0;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.drop-indicator::before,
+.drop-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #4f46e5;
+  border-radius: 50%;
+}
+
+.drop-indicator::before {
+  left: -4px;
+}
+
+.drop-indicator::after {
+  right: -4px;
+}
+
+.kanban-column.column-dragging {
+  opacity: 0.5;
+  transform: scale(0.99);
+}
+
+.cursor-not-allowed-override {
+  cursor: not-allowed !important;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.92); }
+}
+
+.pulse-sync {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+.priority-urgent {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.priority-high {
+  background-color: #ffedd5;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.priority-medium {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+}
+
+.priority-low {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.role-badge-admin {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  color: white;
+}
+
+.role-badge-manager {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+}
+
+.role-badge-developer {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: white;
+}
+
+.role-badge-viewer {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+  color: white;
+}
+
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.modal-backdrop.active {
+  opacity: 1;
+}
+
+.modal-content {
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+.modal-content.active {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gantt-bar {
+  transition: width 0.3s ease, left 0.3s ease, filter 0.2s ease;
+}
+
+.gantt-bar:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

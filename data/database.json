@@ -1,0 +1,563 @@
+{
+  "users": [
+    {
+      "id": "user-admin-1",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@enterprise.io",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+      "department": "Engineering Leadership"
+    },
+    {
+      "id": "user-pm-1",
+      "name": "Sarah Chen",
+      "email": "sarah.chen@enterprise.io",
+      "role": "manager",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+      "department": "Product Management"
+    },
+    {
+      "id": "user-dev-1",
+      "name": "Liam Patel",
+      "email": "liam.patel@enterprise.io",
+      "role": "developer",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      "department": "Frontend Engineering"
+    },
+    {
+      "id": "user-dev-2",
+      "name": "Marcus Vance",
+      "email": "marcus.v@enterprise.io",
+      "role": "developer",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+      "department": "Backend Architecture"
+    },
+    {
+      "id": "user-viewer-1",
+      "name": "Elena Rostova",
+      "email": "elena.r@enterprise.io",
+      "role": "viewer",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
+      "department": "Stakeholder & Executive Review"
+    }
+  ],
+  "boards": [
+    {
+      "id": "board-sprint-42",
+      "title": "Q4 Product Launch (Sprint 42)",
+      "description": "Core product features, payment gateway upgrade, and security compliance audit.",
+      "color": "#4f46e5",
+      "icon": "rocket",
+      "createdAt": "2026-10-18T03:55:52.740Z",
+      "updatedAt": "2026-11-01T03:55:52.740Z",
+      "lists": [
+        {
+          "id": "list-1-backlog",
+          "title": "Product Backlog",
+          "order": 0,
+          "wipLimit": 10
+        },
+        {
+          "id": "list-1-todo",
+          "title": "Ready for Dev",
+          "order": 1,
+          "wipLimit": 6
+        },
+        {
+          "id": "list-1-progress",
+          "title": "In Progress",
+          "order": 2,
+          "wipLimit": 4
+        },
+        {
+          "id": "list-1-review",
+          "title": "Code Review & QA",
+          "order": 3,
+          "wipLimit": 3
+        },
+        {
+          "id": "list-1-done",
+          "title": "Shipped / Done",
+          "order": 4,
+          "wipLimit": 0
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-101",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-progress",
+          "title": "Implement OAuth2 & Multi-Factor Authentication",
+          "description": "Integrate WebAuthn, hardware key support, and SMS/TOTP fallback according to NIST guidelines.",
+          "priority": "urgent",
+          "assigneeId": "user-dev-2",
+          "dueDate": "2026-11-03",
+          "estimatedHours": 16,
+          "loggedHours": 10,
+          "tags": [
+            "Security",
+            "Backend",
+            "Auth"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "chk-1",
+              "text": "Define DB schema for 2FA secrets",
+              "completed": true
+            },
+            {
+              "id": "chk-2",
+              "text": "Implement TOTP QR code generator",
+              "completed": true
+            },
+            {
+              "id": "chk-3",
+              "text": "Add WebAuthn biometric passkey handler",
+              "completed": false
+            },
+            {
+              "id": "chk-4",
+              "text": "Write end-to-end security integration tests",
+              "completed": false
+            }
+          ],
+          "comments": [
+            {
+              "id": "c-1",
+              "userId": "user-pm-1",
+              "userName": "Sarah Chen",
+              "userRole": "manager",
+              "userAvatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+              "text": "Please ensure Passkey registration falls back gracefully on older Safari browsers.",
+              "createdAt": "2026-10-31T22:55:52.740Z"
+            },
+            {
+              "id": "c-2",
+              "userId": "user-dev-2",
+              "userName": "Marcus Vance",
+              "userRole": "developer",
+              "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+              "text": "Done! Testing WebAuthn simulator with Chrome DevTools right now.",
+              "createdAt": "2026-11-01T01:55:52.740Z"
+            }
+          ],
+          "createdAt": "2026-10-27T03:55:52.740Z"
+        },
+        {
+          "id": "task-102",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-progress",
+          "title": "Interactive Kanban Drag-and-Drop Optimization",
+          "description": "Enhance drop indicator lines, keyboard accessibility (ARIA drag-drop), and optimistic position state updates.",
+          "priority": "high",
+          "assigneeId": "user-dev-1",
+          "dueDate": "2026-11-02",
+          "estimatedHours": 12,
+          "loggedHours": 8,
+          "tags": [
+            "Frontend",
+            "UX",
+            "DnD"
+          ],
+          "order": 1,
+          "checklist": [
+            {
+              "id": "chk-11",
+              "text": "HTML5 native drag event handling",
+              "completed": true
+            },
+            {
+              "id": "chk-12",
+              "text": "Ghost thumbnail custom styling",
+              "completed": true
+            },
+            {
+              "id": "chk-13",
+              "text": "Reorder cards within same column",
+              "completed": true
+            },
+            {
+              "id": "chk-14",
+              "text": "Permission guard against read-only viewer roles",
+              "completed": true
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-28T03:55:52.740Z"
+        },
+        {
+          "id": "task-103",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-todo",
+          "title": "Stripe Billing & Invoice Webhook Service",
+          "description": "Handle customer subscription renewal, charge failure retries, and invoice PDF dispatch via automated emails.",
+          "priority": "high",
+          "assigneeId": "user-dev-2",
+          "dueDate": "2026-11-05",
+          "estimatedHours": 20,
+          "loggedHours": 0,
+          "tags": [
+            "Billing",
+            "API",
+            "Stripe"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "chk-21",
+              "text": "Verify webhook cryptographic signature",
+              "completed": false
+            },
+            {
+              "id": "chk-22",
+              "text": "Handle invoice.payment_succeeded event",
+              "completed": false
+            },
+            {
+              "id": "chk-23",
+              "text": "Handle customer.subscription.deleted event",
+              "completed": false
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-29T03:55:52.740Z"
+        },
+        {
+          "id": "task-104",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-review",
+          "title": "Database Query Indexing & Full-Text Search",
+          "description": "Benchmark search queries across 100k tasks, create GIN / composite indexes, and optimize latency under 25ms.",
+          "priority": "medium",
+          "assigneeId": "user-dev-2",
+          "dueDate": "2026-11-04",
+          "estimatedHours": 8,
+          "loggedHours": 7,
+          "tags": [
+            "Database",
+            "Performance"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "chk-31",
+              "text": "Run EXPLAIN ANALYZE on board join queries",
+              "completed": true
+            },
+            {
+              "id": "chk-32",
+              "text": "Add composite indexes on board_id + list_id + order",
+              "completed": true
+            }
+          ],
+          "comments": [
+            {
+              "id": "c-3",
+              "userId": "user-admin-1",
+              "userName": "Alex Rivera",
+              "userRole": "admin",
+              "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+              "text": "99th percentile response time dropped from 140ms to 18ms. Approved for merge.",
+              "createdAt": "2026-11-01T02:55:52.740Z"
+            }
+          ],
+          "createdAt": "2026-10-26T03:55:52.740Z"
+        },
+        {
+          "id": "task-105",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-done",
+          "title": "Role-Based Access Control (RBAC) Specification",
+          "description": "Formalize permission matrix for Admin, Project Manager, Developer, and Viewer roles with granular capability flags.",
+          "priority": "urgent",
+          "assigneeId": "user-pm-1",
+          "dueDate": "2026-10-31",
+          "estimatedHours": 6,
+          "loggedHours": 6,
+          "tags": [
+            "RBAC",
+            "Architecture",
+            "Security"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "chk-41",
+              "text": "Draft permission matrix RFC",
+              "completed": true
+            },
+            {
+              "id": "chk-42",
+              "text": "Get sign-off from Alex and compliance officer",
+              "completed": true
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-25T03:55:52.740Z"
+        },
+        {
+          "id": "task-106",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-backlog",
+          "title": "Export to CSV / PDF Executive Summary",
+          "description": "Allow project managers to generate one-click status reports with burn-down velocity and completion metrics.",
+          "priority": "low",
+          "assigneeId": "user-dev-1",
+          "dueDate": "2026-11-09",
+          "estimatedHours": 10,
+          "loggedHours": 0,
+          "tags": [
+            "Reporting",
+            "Export"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "chk-51",
+              "text": "Format JSON/CSV export engine",
+              "completed": true
+            },
+            {
+              "id": "chk-52",
+              "text": "Generate styled PDF executive report",
+              "completed": false
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-30T03:55:52.740Z"
+        },
+        {
+          "id": "task-107",
+          "boardId": "board-sprint-42",
+          "listId": "list-1-todo",
+          "title": "Dark Mode Glassmorphic UI Polishing",
+          "description": "Refine high-contrast dark palette, glowing active states, and WCAG AA contrast compliance across all cards.",
+          "priority": "medium",
+          "assigneeId": "user-dev-1",
+          "dueDate": "2026-11-06",
+          "estimatedHours": 8,
+          "loggedHours": 2,
+          "tags": [
+            "Design",
+            "UI/UX"
+          ],
+          "order": 1,
+          "checklist": [
+            {
+              "id": "chk-61",
+              "text": "Audit contrast ratios with Chrome Lighthouse",
+              "completed": true
+            },
+            {
+              "id": "chk-62",
+              "text": "Support system theme preference sync",
+              "completed": false
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-31T03:55:52.740Z"
+        }
+      ]
+    },
+    {
+      "id": "board-design-sys",
+      "title": "Design System & UI Components",
+      "description": "Unified React component library, design tokens, iconography, and accessible modal dialogs.",
+      "color": "#0ea5e9",
+      "icon": "palette",
+      "createdAt": "2026-10-12T03:55:52.740Z",
+      "updatedAt": "2026-11-01T03:55:52.740Z",
+      "lists": [
+        {
+          "id": "list-2-concepts",
+          "title": "Design Concepts",
+          "order": 0,
+          "wipLimit": 5
+        },
+        {
+          "id": "list-2-figma",
+          "title": "Figma Review",
+          "order": 1,
+          "wipLimit": 4
+        },
+        {
+          "id": "list-2-coding",
+          "title": "React Implementation",
+          "order": 2,
+          "wipLimit": 4
+        },
+        {
+          "id": "list-2-storybook",
+          "title": "Documented in Storybook",
+          "order": 3,
+          "wipLimit": 0
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-201",
+          "boardId": "board-design-sys",
+          "listId": "list-2-coding",
+          "title": "Accessible Modal Dialog with Focus Trap",
+          "description": "Build WCAG 2.1 compliant modal system with ESC key dismissal, focus trap, and backdrop blur.",
+          "priority": "high",
+          "assigneeId": "user-dev-1",
+          "dueDate": "2026-11-03",
+          "estimatedHours": 8,
+          "loggedHours": 5,
+          "tags": [
+            "Accessibility",
+            "UI"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "c-201-1",
+              "text": "Focus lock on active dialog",
+              "completed": true
+            },
+            {
+              "id": "c-201-2",
+              "text": "Restore focus on modal close",
+              "completed": true
+            },
+            {
+              "id": "c-201-3",
+              "text": "Smooth backdrop fade animation",
+              "completed": true
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-28T03:55:52.740Z"
+        },
+        {
+          "id": "task-202",
+          "boardId": "board-design-sys",
+          "listId": "list-2-storybook",
+          "title": "Color Tokens & Tailwind Extension",
+          "description": "Establish semantic color palette for alerts, priorities, avatars, and neutral surfaces.",
+          "priority": "medium",
+          "assigneeId": "user-dev-1",
+          "dueDate": "2026-10-30",
+          "estimatedHours": 6,
+          "loggedHours": 6,
+          "tags": [
+            "Tokens",
+            "Tailwind"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "c-202-1",
+              "text": "Generate CSS custom properties",
+              "completed": true
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-22T03:55:52.740Z"
+        }
+      ]
+    },
+    {
+      "id": "board-cloud-infra",
+      "title": "Cloud Infrastructure & SRE",
+      "description": "Zero-downtime Kubernetes deployment, automated SSL renewal, Prometheus metrics, and daily backups.",
+      "color": "#10b981",
+      "icon": "server",
+      "createdAt": "2026-10-02T03:55:52.740Z",
+      "updatedAt": "2026-11-01T03:55:52.740Z",
+      "lists": [
+        {
+          "id": "list-3-todo",
+          "title": "Planned Work",
+          "order": 0,
+          "wipLimit": 8
+        },
+        {
+          "id": "list-3-infra",
+          "title": "Terraform & Staging",
+          "order": 1,
+          "wipLimit": 3
+        },
+        {
+          "id": "list-3-prod",
+          "title": "Production Ready",
+          "order": 2,
+          "wipLimit": 0
+        }
+      ],
+      "tasks": [
+        {
+          "id": "task-301",
+          "boardId": "board-cloud-infra",
+          "listId": "list-3-infra",
+          "title": "Automated Database Backup with Point-In-Time Recovery",
+          "description": "Configure daily WAL archiving to encrypted S3 bucket with hourly delta snapshots.",
+          "priority": "urgent",
+          "assigneeId": "user-admin-1",
+          "dueDate": "2026-11-02",
+          "estimatedHours": 12,
+          "loggedHours": 9,
+          "tags": [
+            "DevOps",
+            "Backup",
+            "Security"
+          ],
+          "order": 0,
+          "checklist": [
+            {
+              "id": "c-301-1",
+              "text": "Terraform S3 bucket with KMS encryption",
+              "completed": true
+            },
+            {
+              "id": "c-301-2",
+              "text": "Cron disaster recovery test script",
+              "completed": true
+            },
+            {
+              "id": "c-301-3",
+              "text": "Verify drill restore in staging cluster",
+              "completed": false
+            }
+          ],
+          "comments": [],
+          "createdAt": "2026-10-29T03:55:52.740Z"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-1",
+      "timestamp": "2026-11-01T01:55:52.740Z",
+      "userId": "user-dev-1",
+      "userName": "Liam Patel",
+      "userRole": "developer",
+      "userAvatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      "action": "moved_task",
+      "details": "moved \"Interactive Kanban Drag-and-Drop Optimization\" to In Progress"
+    },
+    {
+      "id": "act-2",
+      "timestamp": "2026-10-31T23:55:52.740Z",
+      "userId": "user-pm-1",
+      "userName": "Sarah Chen",
+      "userRole": "manager",
+      "userAvatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+      "action": "commented",
+      "details": "commented on \"Implement OAuth2 & Multi-Factor Authentication\""
+    },
+    {
+      "id": "act-3",
+      "timestamp": "2026-10-31T03:55:52.740Z",
+      "userId": "user-admin-1",
+      "userName": "Alex Rivera",
+      "userRole": "admin",
+      "userAvatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+      "action": "completed_task",
+      "details": "approved and marked \"Role-Based Access Control (RBAC) Specification\" as Done"
+    }
+  ]
+}

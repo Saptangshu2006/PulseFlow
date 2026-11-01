@@ -1,0 +1,24 @@
+{
+  "name": "pulseflow-project-management-dashboard",
+  "version": "1.0.0",
+  "description": "Production-grade Project Management Dashboard with Drag-and-Drop, RBAC, and Persistent Storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.3"
+  },
+  "keywords": [
+    "kanban",
+    "project-management",
+    "dashboard",
+    "drag-and-drop",
+    "rbac",
+    "persistence"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}
